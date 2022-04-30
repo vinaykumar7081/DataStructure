@@ -133,6 +133,5 @@ namespace DataStructure
             newNode.next=null;
             return head;
         }
-        
     }
 }

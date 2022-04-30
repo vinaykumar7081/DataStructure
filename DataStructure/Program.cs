@@ -7,7 +7,7 @@ public class Program
         Console.WriteLine(" ***** WELCOME IN THE DATA STRUCTURE *****");
         LinkedList list = new LinkedList();
         bool check = true;
-        Console.WriteLine(" Display Linked List Data 1\n Dislpay Appeded Element list 2\n Adding Data at the perticular Position 3\n Delete Data At Perticular Position 4\n Deleting Last Index Elements 5\n");
+        Console.WriteLine(" Display Linked List Data 1\n Dislpay Appeded Element list 2\n Adding Data at the perticular Position 3\n Delete Data At Perticular Position 4\n Deleting Last Index Elements 5\n Searching Elements In the Linked List 6\n");
         while (check)
         { 
         Console.WriteLine(" **** ENTER THE ABOVE OPTION TO EXECUTE THE METHODS *****");
@@ -45,6 +45,12 @@ public class Program
                 case 5:
                     Console.WriteLine("**** DELETING  AT POSITION ELEMENT IN THE LINKED LIST ****");
                     list.DeleteLastIndex();
+                    list.Display();
+                    break;
+                case 6:
+                    Console.WriteLine("**** SEARCHING ELEMENT IN THE LINKED LIST ****");
+                    int node = list.Search(30);
+                    Console.WriteLine("element present on the index:-> " + node);
                     list.Display();
                     break;
                 case 0:
