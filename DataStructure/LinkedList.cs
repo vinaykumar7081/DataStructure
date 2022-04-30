@@ -93,10 +93,31 @@ namespace DataStructure
                 current = current.next;
                 count++;
             }   
-                    newNode.next = prev.next;
-                    prev.next = newNode;
-                    return this.head;
-                
+                newNode.next = prev.next;
+                prev.next = newNode;
+                return this.head;
+        }
+        public void DeleteNodeAtPerticularPosition(int position)
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Linked List is Empty");
+            }
+            Node temp=this.head;
+            if (position == 0)
+            { 
+            this.head = temp.next;
+            }
+            for (int i = 0; temp != null && i < position - 1; i++)
+            { 
+            temp = temp.next;
+            }
+            if (temp == null || temp.next == null) { }
+            {
+                return;
+            }
+            Node next = temp.next.next;
+            temp.next = null; ;
         }
     }
 }
