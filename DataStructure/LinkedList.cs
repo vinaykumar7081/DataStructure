@@ -119,5 +119,20 @@ namespace DataStructure
             Node next = temp.next.next;
             temp.next = null; ;
         }
+        public Node DeleteLastIndex()
+        {
+            if (head == null)
+            {
+                return null;
+            }
+            Node newNode = head;
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            newNode.next=null;
+            return head;
+        }
+        
     }
 }
