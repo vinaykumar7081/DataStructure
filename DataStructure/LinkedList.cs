@@ -10,22 +10,35 @@ namespace DataStructure
     {
         public Node head;
         public void Add(int data)
-        { 
-        Node node=new Node(data);
+        {
+            Node node = new Node(data);
             if (this.head == null)
             {
                 this.head = node;
             }
-            else 
+            else
             {
                 Node temp = head;
                 while (temp.next != null)
-                { 
-                temp= temp.next;    
+                {
+                    temp = temp.next;
                 }
                 temp.next = node;
-                Console.WriteLine(node.data+ " "+ "inserted into Linked List ");
+                Console.WriteLine(node.data + " " + "inserted into Linked List ");
             }
+        }
+        public void Append(int data)
+        {
+            Node node = new Node(data);
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+                Console.WriteLine(node.data + " " + "Appended into Linked List ");
+            Display();
+            
         }
         public void Display()
         { 

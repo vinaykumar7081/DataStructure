@@ -7,7 +7,7 @@ public class Program
         Console.WriteLine(" ***** WELCOME IN THE DATA STRUCTURE *****");
         LinkedList list = new LinkedList();
         bool check = true;
-        Console.WriteLine(" Display Linked List Data 1\n");
+        Console.WriteLine(" Display Linked List Data 1\n Dislpay Appeded Element list 2\n");
         while (check)
         { 
         Console.WriteLine(" **** ENTER THE ABOVE OPTION TO EXECUTE THE METHODS *****");
@@ -20,6 +20,12 @@ public class Program
                     list.Add(30);
                     list.Add(70);
                     list.Display();
+                    break;
+                case 2:
+                    Console.WriteLine("**** DISPLAYING ELEMENT OF THE LINKED LIST ****");
+                    list.Add(56);
+                    list.Append(30);
+                    list.Append(70);
                     break;
                 case 0:
                     check = false;
