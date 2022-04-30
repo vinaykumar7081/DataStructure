@@ -54,5 +54,49 @@ namespace DataStructure
             }
             Console.WriteLine(" ");
         }
+        public int Search(int addedData)
+        { 
+        Node node=this.head;
+            int count = 0;
+            while (node != null)
+            {
+                if (node.data == addedData)
+                { 
+                return count;
+                }
+                node=node.next;
+                count++;
+            }
+            return count;
+        }
+        public Node InsertAtPerticularPosition(int position, int data)
+        {
+            var newNode = new Node(data);
+            if (this.head==null)
+            {
+               return newNode;
+            }
+            if (position == 0)
+            {
+                newNode.next = head;
+                head = newNode;
+                return head;
+            }
+            Node prev= null;
+            Node current = this.head;
+            int count = 0;
+            while (current != null && count < position)
+            {
+
+
+                prev = current;
+                current = current.next;
+                count++;
+            }   
+                    newNode.next = prev.next;
+                    prev.next = newNode;
+                    return this.head;
+                
+        }
     }
 }
