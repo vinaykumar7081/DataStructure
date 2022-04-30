@@ -24,7 +24,7 @@ namespace DataStructure
                 temp= temp.next;    
                 }
                 temp.next = node;
-                Console.WriteLine("inserted into Linked List "+node.data);
+                Console.WriteLine(node.data+ " "+ "inserted into Linked List ");
             }
         }
         public void Display()
@@ -32,13 +32,14 @@ namespace DataStructure
         Node temp=head;
             if (temp == null)
             { 
-            Console.WriteLine("Linked List is Emplty");
+            Console.WriteLine("There is no element int he linked List");
             }
             while (temp != null)
             { 
-            Console .Write(temp.data+" ");
+            Console .Write(temp.data+ "  ");
                 temp=temp.next;
             }
+            Console.WriteLine(" ");
         }
     }
 }
