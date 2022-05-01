@@ -99,25 +99,25 @@ namespace DataStructure
         }
         public void DeleteNodeAtPerticularPosition(int position)
         {
-            if (this.head == null)
+            if (head == null)
             {
                 Console.WriteLine("Linked List is Empty");
             }
-            Node temp=this.head;
+            Node temp=head;
             if (position == 0)
             { 
-            this.head = temp.next;
+            head = temp.next;
             }
             for (int i = 0; temp != null && i < position - 1; i++)
             { 
             temp = temp.next;
             }
-            if (temp == null || temp.next == null) { }
+            if (temp == null || temp.next == null) 
             {
                 return;
             }
             Node next = temp.next.next;
-            temp.next = null; ;
+            temp.next =next ;
         }
         public Node DeleteLastIndex()
         {
@@ -132,6 +132,21 @@ namespace DataStructure
             }
             newNode.next=null;
             return head;
+        }
+        public void LinkedListSize()
+        {
+            Node temp = this.head;
+            int count = 0;
+            if (temp == null)
+            {
+                Console.WriteLine("Lenked List is Empty");
+            }
+            while (temp != null)
+            { 
+            count++;
+                temp=temp.next;
+            }
+            Console.WriteLine("Linked List Size is:->"+count);
         }
     }
 }

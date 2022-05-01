@@ -7,7 +7,7 @@ public class Program
         Console.WriteLine(" ***** WELCOME IN THE DATA STRUCTURE *****");
         LinkedList list = new LinkedList();
         bool check = true;
-        Console.WriteLine(" Display Linked List Data 1\n Dislpay Appeded Element list 2\n Adding Data at the perticular Position 3\n Delete Data At Perticular Position 4\n Deleting Last Index Elements 5\n Searching Elements In the Linked List 6\n Insert 40 between 30 and 70 7\n");
+        Console.WriteLine(" Display Linked List Data 1\n Dislpay Appeded Element list 2\n Adding Data at the perticular Position 3\n Delete Data At Perticular Position 4\n Deleting Last Index Elements 5\n Searching Elements In the Linked List 6\n Insert 40 between 30 and 70: 7\n Display Size of the Linked List 8\n");
         while (check)
         { 
         Console.WriteLine(" **** ENTER THE ABOVE OPTION TO EXECUTE THE METHODS *****");
@@ -18,6 +18,7 @@ public class Program
                     Console.WriteLine("**** DISPLAYING ELEMENT OF THE LINKED LIST ****");
                     list.Add(56);
                     list.Add(30);
+                    list.Add(40);
                     list.Add(70);
                     list.Display();
                     break;
@@ -60,6 +61,15 @@ public class Program
                     list.Add(70);
                     int b= list.Search(30);
                     list.InsertAtPerticularPosition( b+ 1, 40);
+                    list.Display();
+                    break;
+                case 8:
+                    Console.WriteLine("**** DISPLAYING SIZE OF THE LINKED LIST ****");
+                    int search=list.Search(40);
+                    list.LinkedListSize();
+                    list.Display();
+                    list.DeleteNodeAtPerticularPosition(search);
+                    list.LinkedListSize();
                     list.Display();
                     break;
                 case 0:
